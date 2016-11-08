@@ -1,28 +1,39 @@
 /*-------- Utility Styles --------*/
 * {
 	box-sizing: border-box; 
+	font-family: Proza Libre;
 	/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
 }
 
-/* 
-	Use Google Fonts to make all of the text Proza Libre.
+#dble {
+	font-size: 30px;
+	font-weight: bold;
+}
 
-	Make the Title twice as large as the body text, bold, and spaced evenly.
-*/
+main {
+	width: 100%;
+}
+.container {
 
-/*-------- Main Styles --------*/
+}
 
-/* 
-	Make the main container the full width of the page.
+.formSection {
+	float: left;
+}
 
-	Make the two inner container (the form and the results) align side by side, on the left side of the screen.
+.otherSection {
+	background-color: #C8DBB3;
+	float: right;
+	margin-right: 350px;
+	margin-top: 80px;
+	width: 500px;
+	padding: 20px;
+}
 
-	Every container, form, input, and button should have rounded corners.
-*/
-
-/*-------- Form Styles --------*/
-
+.container {
+	border-radius: 3px;
+}
 
 /* 
 
@@ -55,15 +66,4 @@
 	
 */
 
-
-/*-------- Results Styles --------*/
-
-
-/* 
-
-	The results container should also fill the width of its container, but only up to 500px.
-
-	The results container should have a background color of #C8DBB3, and comfortable padding around the text.
-
-*/
 

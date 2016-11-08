@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>CSS HTML Forms Lab</title>
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<section id="main">
 		<section class="formSection container">
 			<form class="form" method="GET">
-					<h1>My Dev Story</h1>
+					<h1 id="dble">My Dev Story</h1>
 					<div class="row formGroup">
 					    <label for="name">Name:</label>
 					    <input id="name" name="name" >
@@ -90,18 +91,23 @@
 			    </div>
 			</form>
 		</section>
+		<section class="otherSection container">
+			<p>Yo....testing</p>
+		</section>
 	</section>
 	
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 
+		var right = document.querySelector('.otherSection');
+
 		var main = document.querySelector('#main');
 		function makeResults() {
 			var results = document.createElement('section');
 			results.innerHTML = '<h1>' + 'A true story:' + '</h1>';
 			results.className = 'container results';
-			main.appendChild(results);
+			right.appendChild(results);
 		};
 		/*
 		
@@ -111,13 +117,49 @@
 			Don't append it until the form has been submitted.
 
 		*/
-
+		
+		console.log("all goood");
 
 		$("form").on("submit", function(event){
+			event.preventDefault();
+			makeResults();
 
-		    // Stop the form from submitting
+			console.log("once upon a time...");
 
-	    	// Append the new <section> created above.
+		var nombre = $('#name').val();
+
+		var verb1 = $('#verb-1').val();
+
+		var mission1 = $('#mission').val();
+
+		var sentiment1 = $('.radio').val(); 
+
+		var noun1 = $('#noun-1').val();
+
+		var adjective2 = $('.checkboxes').val();
+
+		var noun2 = $('#noun-2').val();
+
+		var pTag = document.createElement('p');
+		pTag.textContent = "Once upon a time there was a Developer named " + nombre + ".";
+		right.appendChild(pTag);
+		
+		var pTag2 = document.createElement('p');
+		pTag2.textContent = nombre + " came to General Asssembly to " + verb1 + " the great mountain of programming knowledge.";
+		right.appendChild(pTag2);
+
+		var pTag3 = document.createElement('p');
+		pTag3.textContent = mission1 + ", " + nombre + " shouted.";
+		right.appendChild(pTag3);
+/*
+		var pTag4 = document.createElement('p');
+		pTag4.textContent = "Though " + sentiment1 + ", " + nombre + " was able to overcome all obstacles with the power of their " + noun1 + ".";
+		right.appendChild(pTag4);
+
+		var pTag5 = document.createElement('p');
+		pTag5.textContent = "In the end, their success can be contributed entirely to their " + adjective2 + " " noun2 + ".";
+		right.appendChild(pTag5);	
+		*/	
 
 	    	/*
 			
