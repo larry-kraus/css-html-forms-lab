@@ -15,11 +15,13 @@ main {
 	width: 100%;
 }
 .container {
-
+	background-color: #E3E6EC;
+	border-radius: 3px;
 }
 
 .formSection {
 	float: left;
+	padding: 0px 30px 30px 30px;
 }
 
 .otherSection {
@@ -31,19 +33,19 @@ main {
 	padding: 20px;
 }
 
-.container {
-	border-radius: 3px;
+.row {
+	padding: 5px;
 }
 
-/* 
+#submitButton {
+	background-color: rgba(39, 208, 127, .5);
+	font-weight: bold;
+	float: right;
+	width: 45px;
+	padding: 2px 0px;
+}
 
-	Make sure the form itself fills the width of whatever container its in, but no larger than 500px.
-	
-	The background should be #E3E6EC, and it should align to the middle of its container.
-	
-	Every element should have nice, even padding or margin around it.
-
-	.row elements should be spaced out so they're not touching.
+/* 	
 
 	.formGroup elements should fill the width of their container, and be inline-block.
 
@@ -58,8 +60,6 @@ main {
 	Textareas should be at least 100px tall.
 
 	Text inputs, select boxes, and textareas should have a 1px border that's #CCC, and none of the default shadows.
-
-	The submit button should float to the right, be bolded, and only be as wide as the text makes it.
 
 	The submit button should be rga(39, 208, 127), but only 50% opacity. On hover, it should be 100% opacity.
 	
