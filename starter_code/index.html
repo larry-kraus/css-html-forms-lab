@@ -133,7 +133,7 @@
 
 		var mission1 = $('#mission').val();
 
-		var sentiment1 = $('.radio').val(); 
+		var sentiment1 = $('input[name=sentiment]:checked', '.radio').val();
 
 		var noun1 = $('#noun-1').val();
 
@@ -152,11 +152,11 @@
 		var pTag3 = document.createElement('p');
 		pTag3.textContent = mission1 + ", " + nombre + " shouted.";
 		right.appendChild(pTag3);
-/*
+
 		var pTag4 = document.createElement('p');
 		pTag4.textContent = "Though " + sentiment1 + ", " + nombre + " was able to overcome all obstacles with the power of their " + noun1 + ".";
 		right.appendChild(pTag4);
-
+/*
 		var pTag5 = document.createElement('p');
 		pTag5.textContent = "In the end, their success can be contributed entirely to their " + adjective2 + " " noun2 + ".";
 		right.appendChild(pTag5);	
